@@ -16,7 +16,7 @@ interface="eth0"
 ipv6addr=$(ip -f inet6 addr show eth0 | awk '/inet6/{print $2}' | head -n 1)
 network=$(sipcalc "$ipv6addr" | grep "Subnet prefix (masked)" | pcregrep -o1 ".+- (.+):0:0:0:0\/64")
 gateway="${network}::1"
-sleeptime="30s"
+sleeptime=${SLEEP_TIME}
 
 # -----
 # Generate Random Address

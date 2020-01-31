@@ -26,6 +26,7 @@ ADD entrypoint.sh /
 
 # set default caddypath
 ENV CADDYPATH=/etc/.caddy
+ENV SLEEP_TIME=60s
 
 EXPOSE 2015
 
